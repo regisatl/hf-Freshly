@@ -1073,6 +1073,17 @@ div.copyright-footer p a img {
         flex-basis: calc((100% / 2) - 2rem);
     }
 
+    .grid-template-column {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+    .display-grid .desert3,
+    .display-grid .cocktails3{
+        width: 50%;
+        margin-inline: auto;
+        grid-area: 2 / span 2 / 3 / span 1;
+    }
+
     .text-svg {
         border: 0.2rem solid white;
         font-size: 12px;
@@ -1090,6 +1101,10 @@ div.copyright-footer p a img {
     form.contact .flex {
         flex-direction: column;
         gap: 0;
+    }
+
+    form.contact label::before{
+        margin-block: 0.5rem;
     }
 
     .further-request textarea {

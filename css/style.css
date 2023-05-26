@@ -1,0 +1,1116 @@
+/* ************************************************************************************************************
+                                        start CSS
+***************************************************************************************************************
+*/
+
+/* 
+***************************************************************************************************************
+Importation de la feuille de style font.css 
+***************************************************************************************************************
+*/
+
+@import url("../fonts/fonts.css");
+
+/* 
+***************************************************************************************************************
+Importation de la feuille de style font.css 
+***************************************************************************************************************
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 
+**********************************************
+    Déclaration des variables du style css
+**********************************************
+ */
+
+:root {
+    --background-base: linear-gradient(to bottom, #ebe3db, #fff 2%);
+    --background-primaire: linear-gradient(to bottom, #ebe3db48, #ffffff59 50%);
+    --bgclr-a: #ccc;
+    --bgclr-hover-a: #950000;
+    --bgclr-active-a: #4c4343;
+    --clr-base: #4c4343;
+    --clr-hover-a: #fff;
+    --bgclr-slick: ;
+    --clr-primaire: #ebe3db;
+    --ff-base: "Athiti";
+    --fz-base: 18px;
+    --fw-base: 400;
+    --fz-h1: 30px;
+    --fz-h2: 25px;
+    --fz-h3: 20px;
+    --fz-h4: 15px;
+    --max-width-desktop: 1400px;
+    --max-width-desktops: 980px;
+    --text-align-center: center;
+}
+
+/* 
+**********************************************
+    Style css pour le body et le container
+**********************************************
+ */
+body {
+    background-image: var(--background-base);
+    color: var(--clr-base);
+    font-family: var(--ff-base);
+    font-size: var(--fz-base);
+    font-weight: 400;
+    margin: 0;
+}
+
+div.container {
+    max-width: var(--max-width-desktop);
+    margin-inline: auto;
+}
+
+div.containers {
+    max-width: var(--max-width-desktops);
+    margin-inline: auto;
+}
+
+/* 
+***************************************************************************************************************
+                                Classes css par défaut utilisables 
+***************************************************************************************************************
+ */
+
+.flex {
+    display: flex;
+}
+
+.flex-star {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.flex-navbar {
+    display: flex;
+    gap: 3rem;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.justify-content_space-between {
+    justify-content: space-between;
+}
+
+.display-grid {
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+}
+
+.grid-template-columns {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+}
+
+.grid-template-column {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+}
+
+.gap {
+    gap: 4rem;
+}
+
+.animation {
+    animation: smooth-body 2s ease normal;
+}
+
+@keyframes smooth-body {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.transition {
+    transition: all 2s ease;
+}
+
+
+/* 
+***************************************************************************************************************
+                                 style css pour le header de la page home  
+***************************************************************************************************************
+ */
+
+header.header {
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+span.img a {
+    text-decoration: none;
+    color: var(--clr-base);
+}
+
+span.img a img {
+    max-width: 20%;
+    max-height: auto;
+}
+
+.navbar ul {
+    padding: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    display: block;
+    background-color: var(--bgclr-a);
+    color: var(--clr-base-a);
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    background-color: var(--bgclr-hover-a);
+    color: var(--clr-hover-a);
+    outline: none;
+    box-shadow: 0px 10px 10px #4c4343aa;
+}
+
+.navbar ul li a.active {
+    background-color: var(--bgclr-active-a);
+    color: var(--clr-hover-a);
+}
+
+/* 
+***************************************************************************************************************
+                                    styles concernant les différents titres 
+***************************************************************************************************************
+*/
+
+.icons-star h1::before,
+.icons-star h1::after,
+.icons-star h2::before,
+.icons-star h2::after,
+.icons-star h3::before,
+.icons-star h3::after,
+.icons-star h4::before,
+.icons-star h4::after {
+    content: " \f005 ";
+    color: var(--bgclr-hover-a);
+    font-family: "Font awesome 5 Free";
+    font-size: 0.6rem;
+    margin-inline: 0.5rem;
+}
+
+span.img h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.icons-star h2,
+.icons-star h3,
+.icons-star h4 {
+    font-family: "Merienda";
+    font-weight: 900;
+}
+
+.icons-star h1 {
+    font-size: var(--fz-h1);
+}
+
+.icons-star h2 {
+    font-size: var(--fz-h2);
+}
+
+.icons-star h3 {
+    font-size: var(--fz-h3);
+}
+
+.icons-star h4 {
+    font-size: var(--fz-h4);
+}
+
+/* 
+***************************************************************************************************************
+                                    styles css pour le main de la page home  
+***************************************************************************************************************
+ */
+
+main.font-weight-about,
+main.menus,
+main.contact {
+    font-weight: 600;
+    margin-block: 0.5rem;
+}
+
+/* 
+***************************************************************************************************************
+                                        styles css concernant pour le slick 
+***************************************************************************************************************
+*/
+
+.slick-slide {
+    padding: 2rem;
+    position: relative;
+
+}
+
+.slick-next {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    padding: 2rem;
+    right: 5%;
+    width: 30px;
+}
+
+.slick-prev {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding: 2rem;
+    left: 5%;
+    width: 50px;
+    z-index: 1;
+}
+
+div.slides,
+article.cards {
+    font-weight: 600;
+    margin-block: 4rem;
+    transition: all 1s;
+}
+
+article.home {
+    font-weight: 600;
+    margin-block: 5rem;
+    transition: all 1s;
+}
+
+div.slides div img {
+    max-height: auto;
+    max-width: 100%;
+}
+
+div.image-float img {
+    float: right;
+    max-height: auto;
+    max-width: 50%;
+    margin-left: 1rem;
+    overflow: auto;
+}
+
+.background {
+    background-color: var(--clr-primaire);
+    padding: 1rem;
+    transition: all 1s;
+}
+
+/* 
+***************************************************************************************************************
+                        styles css du hover sur les images de la page about
+***************************************************************************************************************
+*/
+
+section.card {
+    padding: 0;
+}
+
+div.overlay {
+    max-width: 100%;
+    position: relative;
+}
+
+div.overlay img {
+    cursor: pointer;
+    display: block;
+    max-height: auto;
+    max-width: 100%;
+    transition: all 1s;
+}
+
+div.name-menu {
+    background-color: #4c434390;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.text {
+    border: 0.5rem solid white;
+    color: white;
+    font-family: "Athiti";
+    font-style: italic;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.name-menu p .price {
+    font-size: 50px;
+}
+
+.overlay:hover .name-menu {
+    transform: scale(1);
+}
+
+/* 
+***************************************************************************************************************
+                                styles css différentes card de la page home 
+***************************************************************************************************************
+*/
+
+ul.cards-list-items {
+    padding: 0;
+}
+
+ul.cards-list-items li {
+    border-bottom: 3px dotted var(--clr-base);
+    margin-block: 0.5rem;
+    padding: 1rem 2rem;
+    list-style: none;
+
+}
+
+ul.cards-list-items li::before {
+    content: " \f005 ";
+    color: var(--bgclr-hover-a);
+    font-family: "Font awesome 5 Free";
+    font-size: 0.6rem;
+    margin-inline: 0.5rem;
+}
+
+/*
+***************************************************************************************************************
+                                styles css du button see more de la page home
+***************************************************************************************************************
+*/
+
+div.seeMore {
+    padding: 2rem 1rem;
+    text-align: var(--text-align-center);
+}
+
+div.seeMore a {
+    background-color: var(--clr-base);
+    color: var(--clr-hover-a);
+    display: block;
+    font-weight: 700;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+div.seeMore a:hover {
+    background-color: var(--bgclr-hover-a);
+    color: var(--clr-hover-a);
+}
+
+div.seeMore a img {
+    max-height: auto;
+    max-width: 10%;
+    vertical-align: middle;
+}
+
+/* 
+***************************************************************************************************************
+                            styles css pour le main de la page about  
+***************************************************************************************************************
+ */
+
+article.about,
+article.menus,
+article.contact {
+    font-weight: 600;
+    text-align: var(--text-align-center);
+}
+
+article.about section.about-text p {
+    text-align: left;
+}
+
+section.about-text video {
+    max-height: auto;
+    max-width: 100%;
+}
+
+.about div.background {
+    padding: 1rem;
+}
+
+div.grid {
+    font-weight: 600;
+    margin-inline: auto;
+    max-height: auto;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: var(--text-align-center);
+}
+
+div.grid img {
+    display: block;
+    max-height: auto;
+    max-width: 100%;
+    transition: all 1s;
+}
+
+
+/* 
+**************************************************************************************************************
+                            styles css pour le main de la page menus  
+**************************************************************************************************************
+ */
+.filter button {
+    background-color: var(--clr-primaire);
+    border: none;
+    color: var(--clr-base);
+    font-size: 1rem;
+    font-weight: 900;
+    margin-inline: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.filter .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.filter .flex>div {
+    flex-basis: calc((100% / 3) - 2rem);
+}
+
+.filter button:hover,
+.filter button:focus {
+    background-color: var(--bgclr-hover-a);
+    color: var(--clr-hover-a);
+    outline: 1px solid #950000;
+}
+
+
+.filter button:active,
+.filter button:focus {
+    background-color: var(--bgclr-hover-a);
+    color: var(--clr-hover-a);
+}
+
+div.name-menus .text-svg img {
+    display: block;
+    max-height: auto;
+    max-width: 20%;
+}
+
+.mb-filters {
+    margin-block: 1rem;
+}
+
+/* 
+***************************************************************************************************************
+                            styles css pour le hover des images de la page menus  
+***************************************************************************************************************
+ */
+
+div.overlays {
+    max-width: 100%;
+    position: relative;
+}
+
+div.overlays img {
+    box-shadow: 0px 10px 10px 10px #1515153e;
+    cursor: pointer;
+    display: block;
+    max-width: 100%;
+    max-height: auto;
+    transition: all 1s;
+}
+
+div.overlays div.text-svg img {
+    box-shadow: none;
+    transition: all 1s ease;
+}
+
+div.name-menus {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4c434390;
+    overflow: auto;
+    transform: scale(0);
+    transition: all 1s ease;
+}
+
+.text-svg {
+    border: 0.5rem solid white;
+    color: white;
+    font-family: "Athiti";
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.overlays img:hover {
+    transform: scale(1.1);
+}
+
+.overlays:hover .name-menus {
+    transform: scale(1.1);
+}
+
+
+/* 
+***************************************************************************************************************
+                                    style css pour de la page contact  
+***************************************************************************************************************
+ */
+
+article.contact,
+form.contact,
+article.location-map {
+    margin-block: 1rem;
+}
+
+span.icon::before {
+    border-bottom: dotted;
+    content: " \f005 ";
+    color: var(--bgclr-hover-a);
+    display: inline-block;
+    font-family: "Font awesome 5 Free";
+    font-size: 0.6rem;
+    margin-inline: 0.5rem;
+    padding: 0.5rem 0rem;
+    width: 2%;
+}
+
+form.contact {
+    font-family: "Merienda";
+    font-size: 16px;
+    font-weight: 700;
+}
+
+form.contact label::before {
+    border-bottom: dotted;
+    content: " \f005 ";
+    color: var(--bgclr-hover-a);
+    display: inline-block;
+    margin-inline: 0.5rem;
+    font-family: "Font awesome 5 Free";
+    font-size: 0.6rem;
+    padding: 0.1rem 0rem;
+    width: 5%;
+}
+
+div.group {
+    flex-basis: 100%;
+}
+
+div.group .form-reservation {
+    flex-basis: 50%;
+}
+
+div.group .form-details {
+    flex-basis: 50%;
+}
+
+div.input input {
+    border: 1px solid #4c4343;
+    border-radius: 0.5rem;
+    margin-block: 0.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+div.input input:focus,
+.further-request textarea:focus {
+    outline: 1px solid #4c4343;
+}
+
+section.further-request h2 {
+    margin-block: 0.5rem;
+}
+
+.further-request {
+    margin-block: 2rem;
+}
+
+.further-request textarea {
+    border-radius: 0.5rem;
+    border: 1px solid #4c4343;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    padding: 0.5rem 2rem;
+}
+
+.button-reserve input[type=submit] {
+    cursor: pointer;
+    background-color: var(--clr-base);
+    border: 1px solid #4c4343;
+    border-radius: 0.5rem;
+    color: var(--bgclr-a);
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    transition: all 1s;
+    width: 50%;
+}
+
+.button-reserve input[type=submit]:hover {
+    background-color: var(--bgclr-hover-a);
+}
+
+article.location-map iframe {
+    height: 500px;
+    width: 100%;
+}
+
+/* 
+***************************************************************************************************************
+                                    style css pour le footer de la page home  
+***************************************************************************************************************
+ */
+
+footer.footer {
+    font-weight: 600;
+}
+
+div.link-footer {
+    background-image: url("../instructions/ressources/images/footer-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--clr-hover-a);
+    padding: 1rem 0 3rem 0;
+    text-align: center;
+}
+
+div.link-footer ul {
+    padding: 0;
+
+}
+
+div.link-footer ul li {
+    margin-block: 0.2rem;
+    list-style: none;
+}
+
+div.link-footer ul li a {
+    text-decoration: none;
+}
+
+div.link-footer section h4 {
+    border-bottom: 2px dotted #fff;
+    font-family: "Merienda";
+    padding: 2rem 0;
+}
+
+section.open-hours,
+section.address-contacts,
+section.social-icons {
+    flex-basis: calc((100% / 3) - 4rem);
+}
+
+section.address-contacts ul li a,
+section.social-icons div.icons a i {
+    color: var(--clr-hover-a);
+}
+
+section.social-icons div.icons a i {
+    margin-inline: 0.5rem;
+    transition: all 1s;
+}
+
+div.icons {
+    font-size: 1rem;
+}
+
+section.social-icons div.icons a.facebook:hover i {
+    color: #0073ff;
+}
+
+section.social-icons div.icons a.instagram:hover i {
+    color: #9000ff;
+}
+
+section.social-icons div.icons a.pinterest:hover i {
+    color: #ee0a02;
+}
+
+section.address-contacts ul li a:hover {
+    text-decoration: underline;
+}
+
+
+div.copyright-footer {
+    background-color: #444444;
+    color: var(--clr-hover-a);
+    font-weight: 400;
+    padding: 1rem;
+    text-align: var(--text-align-center);
+}
+
+div.copyright-footer p a {
+    color: var(--clr-hover-a);
+}
+
+div.copyright-footer p a img {
+    width: 50px;
+}
+
+/*
+***************************************************************************************************************
+                                    Responsive pour la tablette
+***************************************************************************************************************
+*/
+
+
+/* 
+***************************************************************************************************************
+   media screen pour la tablette pour home avec un point de rupture de 780px 
+***************************************************************************************************************
+ */
+@media screen and (min-width: 481px) and (max-width:780px) {
+
+    div.wrapper {
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    header.header {
+        padding: 1rem 0;
+    }
+
+    header.header div.container {
+        flex-direction: column;
+    }
+
+    span a.flex {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav.navbar {
+        width: 100%;
+    }
+
+    nav.navbar ul {
+        background-color: var(--clr-primaire);
+    }
+
+    nav.navbar ul a {
+        background-color: var(--clr-primaire);
+    }
+
+    article.slides {
+        margin: 0;
+        padding: 0;
+    }
+
+    .slick-slide {
+        padding: 0;
+    }
+
+    article.home div.image-float img {
+        float: none;
+        margin-inline: auto;
+        max-height: auto;
+        max-width: 100%;
+    }
+
+    div.flex-navbar {
+        flex-direction: column;
+    }
+
+    div.link-footer {
+        font-weight: 400;
+    }
+}
+
+
+/* 
+***************************************************************************************************************
+   media screen pour la tablette pour about avec un point de rupture de 780px 
+***************************************************************************************************************
+ */
+
+@media screen and (min-width: 481px) and (max-width:780px) {
+
+    div.wrapper {
+        margin-inline: auto;
+        max-width: 700px;
+    }
+
+    section.about-text video {
+        margin-inline: auto;
+        max-width: 80%;
+    }
+
+    div.grid {
+        max-width: 100%;
+        max-height: auto;
+        margin-inline: auto;
+    }
+
+    div.grid img {
+        display: inline-block;
+        max-height: auto;
+        max-width: 100%;
+        transition: all 1s;
+    }
+
+    .grid-template-columns {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    div.link-footer {
+        font-weight: 400;
+    }
+}
+
+/* 
+***************************************************************************************************************
+   media screen pour la tablette pour menus avec un point de rupture de 780px 
+***************************************************************************************************************
+ */
+@media screen and (min-width: 481px) and (max-width:780px) {
+
+    .filter .flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}
+
+/* 
+***************************************************************************************************************
+   media screen pour la tablette pour contact avec un point de rupture de 780px 
+***************************************************************************************************************
+ */
+
+@media screen and (min-width: 481px) and (max-width:780px) {}
+
+/* Responsive pour la mobile */
+
+
+/* 
+***************************************************************************************************************
+                media screen pour la mobile pour home avec un point de rupture de 480px 
+***************************************************************************************************************
+ */
+
+@media screen and (max-width: 480px) {
+    div.wrapper {
+        margin-inline: auto;
+        max-width: 90%;
+    }
+
+    header.header {
+        padding: 1rem 0;
+    }
+
+    header.header div.container {
+        flex-direction: column;
+    }
+
+    span a.flex {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    nav.navbar {
+        width: 100%;
+    }
+
+    nav.navbar ul {
+        background-color: var(--clr-primaire);
+        display: block;
+        text-align: center;
+    }
+
+    nav.navbar ul a {
+        background-color: var(--clr-primaire);
+        border: 1px solid #4c4343;
+    }
+
+    article.slides {
+        margin: 0;
+    }
+
+    .slick-slide {
+        padding: 0;
+    }
+
+    .icons-star h2 {
+        font-size: 18px;
+    }
+
+    article.home div.image-float img {
+        float: none;
+        margin-inline: auto;
+        max-height: auto;
+        max-width: 100%;
+    }
+
+    div.flex-navbar {
+        flex-direction: column;
+    }
+
+    div.link-footer div.flex {
+        flex-direction: column;
+    }
+}
+
+
+/* 
+***************************************************************************************************************
+                media screen pour la mobile pour about avec un point de rupture de 480px 
+***************************************************************************************************************
+ */
+
+@media screen and (max-width:480px) {
+
+    section.wrapper {
+        margin-inline: auto;
+        max-width: 400px;
+    }
+
+    section.about-text video {
+        margin-inline: auto;
+        max-width: 80%;
+    }
+
+    div.grid {
+        margin-inline: auto;
+        max-height: auto;
+        max-width: 100%;
+    }
+
+    .grid-template-columns {
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    div.link-footer section {
+        padding: 0;
+        margin: 0;
+    }
+
+    div.link-footer .gap {
+        gap: 0;
+    }
+
+    div.link-footer {
+        font-weight: 400;
+    }
+}
+
+/* 
+***************************************************************************************************************
+                media screen pour la mobile pour menus avec un point de rupture de 480px 
+***************************************************************************************************************
+ */
+
+@media screen and (max-width:480px) {
+
+    .filter button {
+        margin-inline: 0.2rem;
+        padding: 1rem;
+    }
+
+    .filter .flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .filter .flex>div {
+        flex-basis: calc((100% / 2) - 2rem);
+    }
+
+    .text-svg {
+        border: 0.2rem solid white;
+        font-size: 12px;
+        position: absolute;
+    }
+}
+
+
+/* 
+***************************************************************************************************************
+                media screen pour la mobile pour contact avec un point de rupture de 480px 
+***************************************************************************************************************
+ */
+@media screen and (max-width:480px) {
+    form.contact .flex {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .further-request textarea {
+        height: 100px;
+        width: 100%;
+        padding: 0.5rem 2rem;
+    }
+
+    .button-reserve input[type=submit] {
+        justify-content: start;
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    article.location-map iframe {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+/* ***********************************************************************************************************
+                                                End style css
+**************************************************************************************************************
+*/

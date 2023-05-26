@@ -161,12 +161,12 @@ header.header {
     font-size: 20px;
 }
 
-span.img a {
+header.header a {
     text-decoration: none;
     color: var(--clr-base);
 }
 
-span.img a img {
+header.header a img {
     max-width: 20%;
     max-height: auto;
 }
@@ -828,7 +828,7 @@ div.copyright-footer p a img {
         flex-direction: column;
     }
 
-    span a.flex {
+    header.header a.flex {
         align-items: center;
         flex-direction: column;
     }
@@ -845,7 +845,7 @@ div.copyright-footer p a img {
         background-color: var(--clr-primaire);
     }
 
-    article.slides {
+    div.slides {
         margin: 0;
         padding: 0;
     }
@@ -929,7 +929,7 @@ div.copyright-footer p a img {
 
 /* 
 ***************************************************************************************************************
-   media screen pour la tablette pour contact avec un point de rupture de 780px 
+                media screen pour la tablette pour contact avec un point de rupture de 780px 
 ***************************************************************************************************************
  */
 
@@ -958,7 +958,7 @@ div.copyright-footer p a img {
         flex-direction: column;
     }
 
-    span a.flex {
+    header.header a.flex {
         align-items: center;
         flex-direction: column;
     }
@@ -978,8 +978,9 @@ div.copyright-footer p a img {
         border: 1px solid #4c4343;
     }
 
-    article.slides {
+    div.slides {
         margin: 0;
+        padding: 0;
     }
 
     .slick-slide {

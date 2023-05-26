@@ -754,6 +754,12 @@ section.social-icons {
     flex-basis: calc((100% / 3) - 4rem);
 }
 
+section.open-hours ul li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
 section.address-contacts ul li a,
 section.social-icons div.icons a i {
     color: var(--clr-hover-a);
@@ -762,6 +768,9 @@ section.social-icons div.icons a i {
 section.social-icons div.icons a i {
     margin-inline: 0.5rem;
     transition: all 1s;
+}
+section.address-contacts ul li a:hover {
+   text-decoration: underline;
 }
 
 div.icons {
@@ -779,11 +788,6 @@ section.social-icons div.icons a.instagram:hover i {
 section.social-icons div.icons a.pinterest:hover i {
     color: #ee0a02;
 }
-
-section.address-contacts ul li a:hover {
-    text-decoration: underline;
-}
-
 
 div.copyright-footer {
     background-color: #444444;

@@ -993,6 +993,14 @@ div.copyright-footer p a img {
         flex-direction: column;
     }
 
+    a.icons-star h1 {
+        font-size: 20px;
+    }
+
+    article.home h2 {
+        font-size: 16px;
+    }
+
     nav.navbar {
         width: 100%;
     }

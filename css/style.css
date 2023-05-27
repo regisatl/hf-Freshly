@@ -35,9 +35,9 @@ Importation de la feuille de style font.css
     --bgclr-hover-a: #950000;
     --bgclr-active-a: #4c4343;
     --box-shadow: 0px 10px 10px #4c4343aa;
+    --border-radius: 0.5rem;
     --clr-base: #4c4343;
     --clr-hover-a: #fff;
-    --bgclr-slick: ;
     --clr-primaire: #ebe3db;
     --ff-base: "Athiti";
     --fz-base: 18px;
@@ -283,7 +283,7 @@ main.contact {
     height: 30px;
     justify-content: center;
     padding: 2rem;
-    right: 5%;
+    right: 1%;
     width: 30px;
 }
 
@@ -294,7 +294,7 @@ main.contact {
     justify-content: center;
     height: 50px;
     padding: 2rem;
-    left: 5%;
+    left: 1%;
     width: 50px;
     z-index: 1;
 }
@@ -434,11 +434,13 @@ div.seeMore a {
     padding: 0.5rem;
     text-decoration: none;
     transition: var(--transition);
+    border-radius: var(--border-radius);
 }
 
 div.seeMore a:hover {
     background-color: var(--bgclr-hover-a);
     color: var(--clr-hover-a);
+    transform: scale(1.02);
 }
 
 div.seeMore a img {
@@ -555,21 +557,21 @@ div.overlays img {
 
 div.overlays div.text-svg img {
     box-shadow: none;
-    /* display: block; */
+    display: block;
     max-width: 30%;
     transition: var(--transition);
 }
 
 div.name-menus {
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    position: absolute;
     width: 100%;
     height: 100%;
     background-color: #4c434390;
     overflow: auto;
-    transform: scale(1);
+    transform: scale(0);
     transition: var(--transition);
 }
 
@@ -585,6 +587,10 @@ div.name-menus {
     width: 90%;
     transform: translate(-50%, -50%);
     text-align: var(--text-align-center);
+}
+
+div.overlays div.flex {
+    gap: 0;
 }
 
 .text-svg p {
@@ -688,11 +694,11 @@ section.further-request h2 {
 }
 
 .button-reserve input[type=submit] {
-    cursor: pointer;
     background-color: var(--clr-base);
-    border: 1px solid #4c4343;
+    border: none;
     border-radius: 0.5rem;
     color: var(--bgclr-a);
+    cursor: pointer;
     display: block;
     font-weight: 700;
     font-size: 1.5rem;
@@ -881,7 +887,7 @@ div.copyright-footer p a img {
 
 /* 
 ***************************************************************************************************************
-   media screen pour la tablette pour about avec un point de rupture de 780px 
+                media screen pour la tablette pour about avec un point de rupture de 780px 
 ***************************************************************************************************************
  */
 
@@ -922,7 +928,7 @@ div.copyright-footer p a img {
 
 /* 
 ***************************************************************************************************************
-   media screen pour la tablette pour menus avec un point de rupture de 780px 
+                media screen pour la tablette pour menus avec un point de rupture de 780px 
 ***************************************************************************************************************
  */
 @media screen and (min-width: 481px) and (max-width:780px) {
@@ -941,7 +947,7 @@ div.copyright-footer p a img {
 ***************************************************************************************************************
  */
 
-/* Responsive pour la mobile */
+                                    /* Responsive pour la mobile */
 
 /* 
 ***************************************************************************************************************

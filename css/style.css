@@ -986,7 +986,8 @@ div.copyright-footer p a img {
 
     nav.navbar ul a {
         background-color: var(--clr-primaire);
-        border: 1px solid #4c4343;
+        border-top: 1px solid #4c4343;
+        border-bottom: 1px solid #4c4343;
     }
 
     div.slides {

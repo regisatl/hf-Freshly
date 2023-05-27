@@ -34,6 +34,7 @@ Importation de la feuille de style font.css
     --bgclr-a: #ccc;
     --bgclr-hover-a: #950000;
     --bgclr-active-a: #4c4343;
+    --box-shadow: 0px 10px 10px #4c4343aa;
     --clr-base: #4c4343;
     --clr-hover-a: #fff;
     --bgclr-slick: ;
@@ -48,6 +49,7 @@ Importation de la feuille de style font.css
     --max-width-desktop: 1400px;
     --max-width-desktops: 980px;
     --text-align-center: center;
+    --transition: all 1s ease;
 }
 
 /* 
@@ -185,7 +187,7 @@ header.header a img {
     color: var(--clr-base-a);
     padding: 1rem 1.5rem;
     text-decoration: none;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 .navbar ul li a:hover,
@@ -193,7 +195,7 @@ header.header a img {
     background-color: var(--bgclr-hover-a);
     color: var(--clr-hover-a);
     outline: none;
-    box-shadow: 0px 10px 10px #4c4343aa;
+    box-shadow: var(--box-shadow);
 }
 
 .navbar ul li a.active {
@@ -270,7 +272,6 @@ main.contact {
 */
 
 .slick-slide {
-    padding: 2rem;
     position: relative;
 
 }
@@ -302,13 +303,13 @@ div.slides,
 article.cards {
     font-weight: 600;
     margin-block: 4rem;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 article.home {
     font-weight: 600;
     margin-block: 5rem;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 div.slides div img {
@@ -327,7 +328,7 @@ div.image-float img {
 .background {
     background-color: var(--clr-primaire);
     padding: 1rem;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 /* 
@@ -350,7 +351,7 @@ div.overlay img {
     display: block;
     max-height: auto;
     max-width: 100%;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 div.name-menu {
@@ -363,7 +364,7 @@ div.name-menu {
     height: 100%;
     overflow: auto;
     transform: scale(0);
-    transition: 1s ease;
+    transition: var(--transition);
 }
 
 .text {
@@ -377,7 +378,7 @@ div.name-menu {
     height: 90%;
     position: absolute;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: var(--text-align-center);
 }
 
 .name-menu p .price {
@@ -432,7 +433,7 @@ div.seeMore a {
     font-weight: 700;
     padding: 0.5rem;
     text-decoration: none;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 div.seeMore a:hover {
@@ -485,7 +486,7 @@ div.grid img {
     display: block;
     max-height: auto;
     max-width: 100%;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 
@@ -528,12 +529,6 @@ div.grid img {
     color: var(--clr-hover-a);
 }
 
-div.name-menus .text-svg img {
-    display: block;
-    max-height: auto;
-    max-width: 20%;
-}
-
 .mb-filters {
     margin-block: 1rem;
 }
@@ -550,17 +545,19 @@ div.overlays {
 }
 
 div.overlays img {
-    box-shadow: 0px 10px 10px 10px #1515153e;
+    box-shadow: var(--box-shadow);
     cursor: pointer;
     display: block;
     max-width: 100%;
     max-height: auto;
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 div.overlays div.text-svg img {
     box-shadow: none;
-    transition: all 1s ease;
+    /* display: block; */
+    max-width: 30%;
+    transition: var(--transition);
 }
 
 div.name-menus {
@@ -572,8 +569,8 @@ div.name-menus {
     height: 100%;
     background-color: #4c434390;
     overflow: auto;
-    transform: scale(0);
-    transition: all 1s ease;
+    transform: scale(1);
+    transition: var(--transition);
 }
 
 .text-svg {
@@ -587,7 +584,12 @@ div.name-menus {
     height: 90%;
     width: 90%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: var(--text-align-center);
+}
+
+.text-svg p {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -655,6 +657,7 @@ div.group .form-details {
 }
 
 div.input input {
+    cursor: pointer;
     border: 1px solid #4c4343;
     border-radius: 0.5rem;
     margin-block: 0.5rem;
@@ -681,7 +684,7 @@ section.further-request h2 {
     height: 100px;
     width: 100%;
     resize: none;
-    padding: 0.5rem 2rem;
+    padding: 2rem;
 }
 
 .button-reserve input[type=submit] {
@@ -695,7 +698,7 @@ section.further-request h2 {
     font-size: 1.5rem;
     padding: 1rem 5rem;
     text-transform: uppercase;
-    transition: all 1s;
+    transition: var(--transition);
     width: 50%;
 }
 
@@ -757,7 +760,7 @@ section.social-icons {
 section.open-hours ul li:hover {
     cursor: pointer;
     transform: scale(1.1);
-    transition: all 1s;
+    transition: var(--transition);
 }
 
 section.address-contacts ul li a,
@@ -767,10 +770,11 @@ section.social-icons div.icons a i {
 
 section.social-icons div.icons a i {
     margin-inline: 0.5rem;
-    transition: all 1s;
+    transition: var(--transition);
 }
+
 section.address-contacts ul li a:hover {
-   text-decoration: underline;
+    text-decoration: underline;
 }
 
 div.icons {
@@ -903,7 +907,7 @@ div.copyright-footer p a img {
         display: inline-block;
         max-height: auto;
         max-width: 100%;
-        transition: all 1s;
+        transition: var(--transition);
     }
 
     .grid-template-columns {
@@ -937,10 +941,7 @@ div.copyright-footer p a img {
 ***************************************************************************************************************
  */
 
-@media screen and (min-width: 481px) and (max-width:780px) {}
-
 /* Responsive pour la mobile */
-
 
 /* 
 ***************************************************************************************************************
@@ -1082,8 +1083,9 @@ div.copyright-footer p a img {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: auto;
     }
+
     .display-grid .desert3,
-    .display-grid .cocktails3{
+    .display-grid .cocktails3 {
         width: 50%;
         margin-inline: auto;
         grid-area: 2 / span 2 / 3 / span 1;
@@ -1108,7 +1110,7 @@ div.copyright-footer p a img {
         gap: 0;
     }
 
-    form.contact label::before{
+    form.contact label::before {
         margin-block: 0.5rem;
     }
 

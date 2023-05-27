@@ -190,6 +190,11 @@ header.header a img {
     transition: var(--transition);
 }
 
+.navbar ul li a.active {
+    background-color: var(--bgclr-active-a);
+    color: var(--clr-hover-a);
+}
+
 .navbar ul li a:hover,
 .navbar ul li a:focus {
     background-color: var(--bgclr-hover-a);
@@ -198,10 +203,6 @@ header.header a img {
     box-shadow: var(--box-shadow);
 }
 
-.navbar ul li a.active {
-    background-color: var(--bgclr-active-a);
-    color: var(--clr-hover-a);
-}
 
 /* 
 ***************************************************************************************************************
@@ -224,7 +225,7 @@ header.header a img {
     margin-inline: 0.5rem;
 }
 
-span.img h1 {
+header.header a.icons-star h1 {
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -713,6 +714,7 @@ section.further-request h2 {
 }
 
 article.location-map iframe {
+    border: 1px solid var(--clr-base);
     height: 500px;
     width: 100%;
 }
@@ -834,8 +836,12 @@ div.copyright-footer p a img {
         margin-inline: auto;
     }
 
+
     header.header {
-        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 0;
     }
 
     header.header div.container {
@@ -844,7 +850,13 @@ div.copyright-footer p a img {
 
     header.header a.flex {
         align-items: center;
+        display: none;
         flex-direction: column;
+        padding: 1rem;
+    }
+
+    ul.flex-navbar {
+        margin: 0 0 1rem 0;
     }
 
     nav.navbar {
@@ -853,6 +865,7 @@ div.copyright-footer p a img {
 
     nav.navbar ul {
         background-color: var(--clr-primaire);
+        padding: 1rem;
     }
 
     nav.navbar ul a {
@@ -939,6 +952,12 @@ div.copyright-footer p a img {
         gap: 2rem;
     }
 
+    .text-svg {
+        border: 5px solid white;
+        font-size: 12px;
+        position: absolute;
+    }
+
 }
 
 /* 
@@ -947,7 +966,7 @@ div.copyright-footer p a img {
 ***************************************************************************************************************
  */
 
-                                    /* Responsive pour la mobile */
+/* Responsive pour la mobile */
 
 /* 
 ***************************************************************************************************************
@@ -1000,7 +1019,7 @@ div.copyright-footer p a img {
     }
 
     .icons-star h2 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     article.home div.image-float img {
@@ -1099,7 +1118,7 @@ div.copyright-footer p a img {
     }
 
     .text-svg {
-        border: 0.2rem solid white;
+        border: 5px solid white;
         font-size: 12px;
         position: absolute;
     }

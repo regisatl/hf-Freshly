@@ -1099,6 +1099,8 @@ div.copyright-footer p a img {
 @media screen and (max-width:480px) {
 
     .filter button {
+        font-size: 16px;
+        font-weight: 500;
         margin-inline: 0.2rem;
         padding: 1rem;
     }

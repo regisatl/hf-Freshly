@@ -1099,8 +1099,8 @@ div.copyright-footer p a img {
 @media screen and (max-width:480px) {
 
     .filter button {
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 0.6rem;
+        font-weight: 600;
         margin-inline: 0.2rem;
         padding: 1rem;
     }
@@ -1128,8 +1128,8 @@ div.copyright-footer p a img {
     }
 
     .text-svg {
-        border: 5px solid white;
-        font-size: 12px;
+        border: 2px solid white;
+        font-size: 0.3rem;
         position: absolute;
     }
 }

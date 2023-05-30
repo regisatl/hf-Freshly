@@ -836,11 +836,7 @@ div.copyright-footer p a img {
         margin-inline: auto;
     }
 
-
     header.header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
         padding: 0;
     }
 
@@ -850,9 +846,7 @@ div.copyright-footer p a img {
 
     header.header a.flex {
         align-items: center;
-        display: none;
         flex-direction: column;
-        padding: 1rem;
     }
 
     ul.flex-navbar {

@@ -829,7 +829,7 @@ div.copyright-footer p a img {
    media screen pour la tablette pour home avec un point de rupture de 780px 
 ***************************************************************************************************************
  */
-@media screen and (min-width: 481px) and (max-width:780px) {
+@media screen and (min-width: 780px) and (max-width:980px) {
 
     div.wrapper {
         max-width: 700px;
@@ -904,7 +904,7 @@ div.copyright-footer p a img {
 ***************************************************************************************************************
  */
 
-@media screen and (min-width: 481px) and (max-width:780px) {
+@media screen and (min-width: 780px) and (max-width:980px) {
 
     div.wrapper {
         margin-inline: auto;
@@ -944,7 +944,7 @@ div.copyright-footer p a img {
                 media screen pour la tablette pour menus avec un point de rupture de 780px 
 ***************************************************************************************************************
  */
-@media screen and (min-width: 481px) and (max-width:780px) {
+@media screen and (min-width: 780px) and (max-width:980px) {
 
     .filter .flex {
         flex-wrap: wrap;
@@ -966,18 +966,21 @@ div.copyright-footer p a img {
 ***************************************************************************************************************
  */
 
-/* Responsive pour la mobile */
+/************************************************************************************************************** 
+                                        Responsive pour la mobile 
+**************************************************************************************************************
+*/
 
 /* 
 ***************************************************************************************************************
-                media screen pour la mobile pour home avec un point de rupture de 480px 
+                media screen pour la mobile pour home avec un point de rupture de 380px 
 ***************************************************************************************************************
  */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:779px) {
     div.wrapper {
         margin-inline: auto;
-        max-width: 90%;
+        max-width: 380px;
     }
 
     header.header {
@@ -1049,16 +1052,11 @@ div.copyright-footer p a img {
 
 /* 
 ***************************************************************************************************************
-                media screen pour la mobile pour about avec un point de rupture de 480px 
+                media screen pour la mobile pour about avec un point de rupture de 380px 
 ***************************************************************************************************************
  */
 
-@media screen and (max-width:480px) {
-
-    section.wrapper {
-        margin-inline: auto;
-        max-width: 400px;
-    }
+@media screen and (max-width:779px) {
 
     section.about-text video {
         margin-inline: auto;
@@ -1092,15 +1090,15 @@ div.copyright-footer p a img {
 
 /* 
 ***************************************************************************************************************
-                media screen pour la mobile pour menus avec un point de rupture de 480px 
+                media screen pour la mobile pour menus avec un point de rupture de 380px 
 ***************************************************************************************************************
  */
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:779px) {
 
     .filter button {
         font-size: 0.6rem;
-        font-weight: 600;
+        font-weight: 800;
         margin-inline: 0.2rem;
         padding: 1rem;
     }
@@ -1140,7 +1138,7 @@ div.copyright-footer p a img {
                 media screen pour la mobile pour contact avec un point de rupture de 480px 
 ***************************************************************************************************************
  */
-@media screen and (max-width:480px) {
+@media screen and (max-width:779px) {
     form.contact .flex {
         flex-direction: column;
         gap: 0;
